@@ -12,13 +12,14 @@ function sumResistance(resistors) {
     return `${total} ohms`;
 }
 
-/*Aquí los ejemplos E1:*/
+/*Aquí 3 ejemplos del E1:*/
 function sumResitance(resistors) {
     const total = resistors.reduce((acc, res) => acc + Math.abs(res), 0);
     return `${total} ohms`;
 }
 console.log(sumResitance([-1, 5, 6, 3]));
 console.log(sumResitance([14, 3.5, 6]));
+console.log(sumResitance([25, 7, 9]));
 
 
 
@@ -35,12 +36,13 @@ function numDiv(num) {
     return [num / 2, num / 2];
 }
 
-/*Aquí los ejemplos E2:*/
+/*Aquí 3 ejemplos del E2:*/
 function numDiv(num) {
     return [num / 2, num / 2];
 }
 console.log(numDiv(4));
 console.log(numDiv(10));
+console.log(numDiv(22));
 
 
 
@@ -57,12 +59,13 @@ function secretName(members) {
     return members.map(name => name[0]).sort().join('');
 }
 
-/*Aquí los ejemplos E3:*/
+/*Aquí 3 ejemplos del E3:*/
 function secretName(members) {
     return members.map(name => name[0]).sort().join('');
 }
 console.log(secretName(["Esperanza", "Franco", "Nia"]));
 console.log(secretName(["Alma", "Bertha", "Carlos"]));
+console.log(secretName(["Andrea", "Mafer", "Oscar", "Rosario"]));
 
 
 
@@ -81,7 +84,7 @@ function onlineStatus(users) {
     return `${users[0]}, ${users[1]} and ${users.length - 2} more online`;
 }
 
-/*Aquí los ejemplos E4:*/
+/*Aquí 3 ejemplos del E4:*/
 function onlineStatus(users) {
     if (users.length === 1) return `${users[0]} online`;
     if (users.length === 2) return `${users[0]} and ${users[1]} online`;
@@ -107,12 +110,13 @@ function arrayMultiplos(number, length) {
     return Array.from({ length }, (_, i) => number * (i + 1));
 }
 
-/*Aquí los ejemplos E5:*/
+/*Aquí 3 ejemplos del E5:*/
 function arrayMultiplos(number, length) {
     return Array.from({ length }, (_, i) => number * (i + 1));
 }
 console.log(arrayMultiplos(2, 10));
-console.log(arrayMultiplos(17, 6));
+console.log(arrayMultiplos(17, 26));
+console.log(arrayMultiplos(1, 12));
 
 
 
@@ -131,7 +135,7 @@ function positiveDom(arr) {
     return positiveCount > negativeCount;
 }
 
-/*Aquí los ejemplos E6:*/
+/*Aquí 1 ejemplo del E6:*/
 function positiveDom(arr) {
     const positiveCount = arr.filter(num => num > 0).length;
     const negativeCount = arr.filter(num => num < 0).length;
@@ -162,7 +166,7 @@ function antipodalAverage(arr) {
     return arr.slice(0, halfLength).map((num, i) => (num + arr[arr.length - 1 - i]) / 2);
 }
 
-/*Aquí los ejemplos E7:*/
+/*Aquí 2 ejemplos del E7:*/
 function antipodalAverage(arr) {
     if (arr.length % 2 !== 0) arr.splice(Math.floor(arr.length / 2), 1);
     const halfLength = arr.length / 2;
@@ -170,3 +174,4 @@ function antipodalAverage(arr) {
 }
 console.log(antipodalAverage([1, 2, 3, 5, 22, 6]));
 console.log(antipodalAverage([1, 2, 3, 4, 522, 5, 7]));
+console.log(antipodalAverage([1, 2, 8, 10, 25]));
